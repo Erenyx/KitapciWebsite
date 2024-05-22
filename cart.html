@@ -27,14 +27,14 @@
 
         .promoCode .btn {
             padding: 8px 15px;
-            background-color: #4CAF50;
+            background-color: #3333CC;
             color: white;
             border: none;
             cursor: pointer;
         }
 
         .promoCode .btn:hover {
-            background-color: #45a049;
+            background-color: #3333CC;
         }
     </style>
 </head>
@@ -77,12 +77,12 @@
                     <div class="cartSection">
                         <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
                         <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Engineering Drawing</h3>
-                        <p><input type="text" class="qty" placeholder="3"/> x $5.00</p>
+                        <h3>Nutuk</h3>
+                        <p><input type="text" class="qty" placeholder="3"/> x $0.00</p>
                         <p class="stockStatus"> In Stock</p>
                     </div>
                     <div class="prodTotal cartSection">
-                        <p>$15.00</p>
+                        <p>$0.00</p>
                     </div>
                     <div class="cartSection removeWrap">
                         <a href="#" class="remove" onclick="removeItem(this)">x</a>
@@ -94,12 +94,12 @@
                     <div class="cartSection">
                         <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
                         <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Software Engineering</h3>
-                        <p><input type="text" class="qty" placeholder="3"/> x $5.00</p>
+                        <h3>Araba Sevdası</h3>
+                        <p><input type="text" class="qty" placeholder="3"/> x $0.00</p>
                         <p class="stockStatus"> In Stock</p>
                     </div>
                     <div class="prodTotal cartSection">
-                        <p>$15.00</p>
+                        <p>$0.00</p>
                     </div>
                     <div class="cartSection removeWrap">
                         <a href="#" class="remove" onclick="removeItem(this)">x</a>
@@ -111,12 +111,12 @@
                     <div class="cartSection">
                         <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
                         <p class="itemNumber">#QUE-007544-002</p>
-                        <h3>Engineering Mathematics-1</h3>
-                        <p><input type="text" class="qty" placeholder="3"/> x $5.00</p>
-                        <p class="stockStatus out"> Out of Stock</p>
+                        <h3>Nutuk</h3>
+                        <p><input type="text" class="qty" placeholder="3"/> x $0.00</p>
+                        <p class="stockStatus out"> In Stock</p>
                     </div>
                     <div class="prodTotal cartSection">
-                        <p>$15.00</p>
+                        <p>$0.00</p>
                     </div>
                     <div class="cartSection removeWrap">
                         <a href="#" class="remove" onclick="removeItem(this)">x</a>
@@ -139,10 +139,10 @@
 
     <div class="subtotal cf">
         <ul>
-            <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
-            <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
-            <li class="totalRow"><span class="label">Tax</span><span the="value">$4.00</span></li>
-            <li class="totalRow final"><span the="label">Total</span><span class="value">$44.00</span></li>
+            <li class="totalRow"><span class="label">Subtotal</span><span class="value">$0.00</span></li>
+            <li class="totalRow"><span class="label">Shipping</span><span class="value">$0.00</span></li>
+            <li class="totalRow"><span class="label">Tax</span><span the="value">$0.00</span></li>
+            <li class="totalRow final"><span the="label">Total</span><span class="value">$0.00</span></li>
             <li class="totalRow"><a href="form-validation.html" class="btn continue">Checkout</a></li>
         </ul>
     </div>
@@ -158,17 +158,18 @@
 
 <section class="footer">
     <div class="box-container">
-        <div the="box">
+        <div class="box">
             <h3>our locations</h3>
             <a href="#"> <i class="fas fa-map-marker-alt"></i> Turkey </a>
             <a href="#"> <i class="fas fa-map-marker-alt"></i> Poland </a>
         </div>
+
         <div class="box">
             <h3>quick links</h3>
             <a href="./index.html"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="./index.html#featured"> <i class="fas fa-arrow-right"></i> featured </a>
             <a href="#"> <i class="fas fa-arrow-right"></i> Category </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="./index.html#reviews"> <i class="fas fa-arrow-right"></i> reviews </a>
             <a href="./feedback.html"> <i class="fas fa-arrow-right"></i> feedback </a>
         </div>
         <div class="box">
@@ -176,9 +177,9 @@
             <a href="#"> <i class="fas fa-phone"></i> 987654321 </a>
             <a href="#"> <i class="fas fa-envelope"></i> internettechnology@edu.cdv.pl </a>
             <img src="image/Poland_Turkey_Locator.png" class="map" alt="">
-            <img src="image/Poland_Turkey_Locator.png" class="map" alt="">
         </div>
     </div>
+
     <div class="share">
         <a href="http://www.facebook.com" class="fab fa-facebook-f"></a>
         <a href="https://twitter.com/" class="fab fa-twitter"></a>
@@ -192,11 +193,11 @@
 <script>
     function applyPromoCode() {
         var promoCode = document.getElementById('promo').value;
-        if (promoCode === "ADMIN") {
+        if (promoCode === "KATARZYNA") {
             var subtotal = parseFloat(document.querySelector('.subtotal .value').textContent.substring(1));
             var discount = subtotal * 0.1;
             var newTotal = subtotal - discount;
-            document.querySelector('.subtotal .value').textContent = '$' + newTotal.toFixed(2);
+            document.querySelector('.subtotal .value').textContent = '$' + newTotal.toFixed(2);0
             alert('Promo code applied successfully!');
         } else {
             alert('Invalid promo code!');
@@ -205,17 +206,19 @@
 
     function removeItem(element) {
         var item = element.closest('.items');
-        item.remove();
-        updateSubtotal();
+        item.remove(); // Remove the item from the DOM
+        updateSubtotal(); // Recalculate the subtotal after the item is removed
     }
 
     function updateSubtotal() {
         var total = 0;
-        var items = document.querySelectorAll('.items');
+        var items = document.querySelectorAll('.items'); // Select all items in the cart
         items.forEach(function(item) {
-            var price = parseFloat(item.querySelector('.prodTotal p').textContent.substring(1));
-            var qty = parseInt(item.querySelector('.qty').value);
-            total += price * qty;
+            if (item.querySelector('.prodTotal p') && item.querySelector('.qty')) {
+                var price = parseFloat(item.querySelector('.prodTotal p').textContent.substring(1));
+                var qty = parseInt(item.querySelector('.qty').value);
+                total += price * qty; // Calculate total based on remaining items
+            }
         });
         document.querySelector('.subtotal .value').textContent = '$' + total.toFixed(2);
     }
